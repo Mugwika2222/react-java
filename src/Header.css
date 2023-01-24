@@ -1,0 +1,17 @@
+.top-nav{
+    background-color: rgb(190, 95, 95);
+    color: azure;
+    text-align: center;
+    padding: 2%;
+    display: flex;
+}
+.list{
+    color:black;
+    text-emphasis: none;
+    padding: 3vh;
+    font-size: large;
+    text-decoration: none;
+    text-align: justify;
+
+
+}
