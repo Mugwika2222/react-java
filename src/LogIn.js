@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button,Box } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css'; 
@@ -19,7 +19,13 @@ function LogIn(props) {
     }
 
   return (
-    <div class="login">
+    <Box     component="form"
+    sx={{
+      '& .MuiTextField-root': { m: 1, width: '25ch' },
+    }}
+    noValidate
+    autoComplete="off">
+       <div class="login">
        <h1>LOGIN</h1>
         <form onSubmit={LogIn}>
             <div>
@@ -35,6 +41,8 @@ function LogIn(props) {
               <Button type='submit'>LogIn</Button>
           </form>
     </div>
+    </Box>
+    
   )
 }
 
