@@ -1,5 +1,9 @@
+import { Button } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './login.css'; 
+
+
 
 function LogIn(props) {
     const  navigate = useNavigate();
@@ -16,9 +20,8 @@ function LogIn(props) {
 
   return (
     <div class="login">
-      
+       <h1>LOGIN</h1>
         <form onSubmit={LogIn}>
-          <h1>LogIn</h1>
             <div>
               <label>Username:
                       <input  value ={username} onChange ={e =>setUsername(e.target.value)} type="text" />
@@ -29,7 +32,7 @@ function LogIn(props) {
                       <input  value ={passWord}  onChange ={e =>setPassWord(e.target.value)}type="text" />
                   </label>
               </div>
-              <button type='submit'>LogIn</button>
+              <Button type='submit'>LogIn</Button>
           </form>
     </div>
   )
