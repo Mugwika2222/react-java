@@ -1,4 +1,4 @@
-import { Button,Box } from '@mui/material';
+import { Button,Box,TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css'; 
@@ -26,20 +26,22 @@ function LogIn(props) {
     noValidate
     autoComplete="off">
        <div class="login">
-       <h1>LOGIN</h1>
-        <form onSubmit={LogIn}>
-            <div>
-              <label>Username:
-                      <input  value ={username} onChange ={e =>setUsername(e.target.value)} type="text" />
-                  </label>
-            </div>
-              <div>
-                <label>PassWord:
-                      <input  value ={passWord}  onChange ={e =>setPassWord(e.target.value)}type="text" />
-                  </label>
-              </div>
-              <Button type='submit'>LogIn</Button>
-          </form>
+         <h1>LOGIN</h1>
+                  <TextField  onSubmit={LogIn}
+                  required
+                  id="outlined-required"
+                  label="Username"
+                  value ={username} onChange ={e =>setUsername(e.target.value)} type="text" 
+                  defaultValue="Username"
+                   />
+                  <TextField
+                      id="outlined-password-input"
+                      label="Password"
+                      value ={passWord}  onChange ={e =>setPassWord(e.target.value)} type="password" 
+                      autoComplete="current-password"
+                    />
+                  <Button type='submit'>LogIn</Button>
+              
     </div>
     </Box>
     
