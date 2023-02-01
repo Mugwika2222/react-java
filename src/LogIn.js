@@ -20,6 +20,7 @@ function LogIn(props) {
 
   return (
     <Box     component="form"
+    onSubmit={LogIn}
     sx={{
       '& .MuiTextField-root': { m: 1, width: '25ch' },
     }}
@@ -27,7 +28,7 @@ function LogIn(props) {
     autoComplete="off">
        <div class="login">
          <h1>LOGIN</h1>
-                  <TextField  onSubmit={LogIn}
+                  <TextField 
                   required
                   id="outlined-required"
                   label="Username"

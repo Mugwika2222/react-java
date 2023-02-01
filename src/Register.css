@@ -2,5 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.card{
+
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }

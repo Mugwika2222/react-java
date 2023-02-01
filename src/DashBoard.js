@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React from 'react'
 import {Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -16,10 +17,10 @@ function DashBoard(props) {
 <form onSubmit={LogOut}>
           <Link className='list' to = "/Tables">Post</Link>  
           <Link  className='list' to ="#">ToDo</Link>
-          <button type='submit'>logout</button>
+          <Button type='submit'>logout</Button>
           </form>
     </div>
   )
 }
 
-export default DashBoard
+export default DashBoard;
