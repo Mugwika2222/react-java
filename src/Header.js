@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Typography, } from '@mui/material';
 import AnchorIcon from '@mui/icons-material/Anchor';
 function HEADER(){
     return (
-        <div className='top-nav'>   
+        <div className=''>   
         <section>
           <AppBar>
             <Toolbar>

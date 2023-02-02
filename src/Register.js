@@ -30,26 +30,26 @@ function Register() {
                       label="Username"
                       value ={username} onChange ={e =>setUsername(e.target.value)} type="text" 
                       defaultValue="Username"
-                      />
+                      /> <br/>
                       <TextField 
                       required
                       id="outlined-required"
                       label="Email"
                       value ={email} onChange ={e =>setEmail(e.target.value)} type="text" 
                       defaultValue="Email"
-                      />
+                      /> <br/>
                       <TextField
                       id="outlined-number"
                       label="Number"
                       value ={number} onChange ={e =>setNumber(e.target.value)}   type="number"
 
-                      />
+                      /> <br/>
                       <TextField
                           id="outlined-password-input"
                           label="Password"
                           value ={passWord}  onChange ={e =>setPassWord(e.target.value)} type="password" 
                           autoComplete="current-password"
-                        />
+                        /> <br/>
                       <Button variant="outlined" type='submit'>SignUp</Button>
                       <h5>Already have an account?<Link component = {RouterLink} to ='/LogIn'>Login here</Link></h5>
                 </CardContent>
