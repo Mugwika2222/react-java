@@ -30,6 +30,7 @@ function LogIn(props) {
        <div class="login">
         <Card>
         <h1>LOGIN</h1>
+        <h5>Not a member yet?<Link component = {RouterLink} to ='/Register'>Register</Link></h5>
           <CardContent>
           <TextField 
                     required
