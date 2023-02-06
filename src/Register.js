@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Button,Box,TextField,Link, Card, CardContent } from '@mui/material';
 import { Link as RouterLink } from "react-router-dom";
 import './Register.css'; 
+import { Password } from '@mui/icons-material';
 function Register() {
     const [username, setUsername] = useState('collins');
     const [email, setEmail] = useState();
@@ -9,7 +10,7 @@ function Register() {
     const [passWord, setPassWord] = useState();
     const SignUp = e =>{
         e.preventDefault();
-          console.log(username);
+          console.log(username,email,number,Password);
     }
 
   return (

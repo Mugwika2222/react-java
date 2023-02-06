@@ -9,7 +9,7 @@ function HEADER(){
           <AppBar>
             <Toolbar>
             <AnchorIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
+            <Typography 
             variant="h6"
             noWrap
             component="a"
@@ -22,15 +22,15 @@ function HEADER(){
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              justifyContent : 'center',
+
             }}
           >
             PLUMBERS<br/>
             INC.
           </Typography>
-              <Typography sx={{marginLeft:'auto'}}><Link className='list' to = "/">Home</Link></Typography>
-              <Typography><Link  className='list' to = "/About">About</Link> </Typography>
-              <Typography><Link  className='list' to ="/Login">Log In</Link></Typography>  
-              <Typography><Link className='list' to ="/Register">Register</Link></Typography>
+              <Typography className='typo'><Link  className='list' to ="/Login">Log In</Link></Typography>  
+              <Typography  className='typo'><Link className='list' to ="/Register">Register</Link></Typography>
             </Toolbar>  
           </AppBar>
          
