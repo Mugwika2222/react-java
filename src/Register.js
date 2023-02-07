@@ -51,7 +51,7 @@ function Register() {
                           value ={passWord}  onChange ={e =>setPassWord(e.target.value)} type="password" 
                           autoComplete="current-password"
                         /> <br/>
-                      <Button variant="outlined" type='submit'>SignUp</Button>
+                      <Button  type='submit'>SignUp</Button>
                       <h5>Already have an account?<Link component = {RouterLink} to ='/LogIn'>Login here</Link></h5>
                 </CardContent>
               </Card>

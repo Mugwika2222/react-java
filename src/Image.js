@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import pexel from './images/pexel2.jpg';
+import engineers from './images/engineers.png';
 import './Image.css';
 
 export default class image extends Component {
   render() {
     return (
       <div class ='images'>
-        <img src={pexel}/>
+        <img src={engineers}/>
       </div>
     )
   }
