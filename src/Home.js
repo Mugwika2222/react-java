@@ -20,13 +20,14 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Home() {
   return (
+
     <div className='Home'>
       <Image/>
-      
-        <h1 style={{borderBottom:'3px solid black '}}>HOW IT WORKS</h1>
+          <h1>HOW IT WORKS</h1>
             <Box sx={{ 
               width: '100%',
               height: '20%',
+              padding: '5%',
               paddingBottom:'10%',
           }}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>

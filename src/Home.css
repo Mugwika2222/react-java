@@ -2,3 +2,10 @@
 color: black;
 text-align: center;
 }
+.how{
+border-bottom: 2px solid black;
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
