@@ -23,7 +23,7 @@ function Home() {
     <div className='Home'>
       <Image/>
       
-        <h1>HOW IT WORKS</h1>
+        <h1 style={{borderBottom:'3px solid black '}}>HOW IT WORKS</h1>
             <Box sx={{ 
               width: '100%',
               height: '20%',
