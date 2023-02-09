@@ -3,19 +3,31 @@ import { Button,Box,TextField,Link, Card, CardContent } from '@mui/material';
 import { Link as RouterLink } from "react-router-dom";
 import './Register.css'; 
 import { Password } from '@mui/icons-material';
+import axios from 'axios';
 function Register() {
     const [username, setUsername] = useState('collins');
     const [email, setEmail] = useState();
     const [number, setNumber] = useState();
-    const [passWord, setPassWord] = useState();
-    const SignUp = e =>{
-        e.preventDefault();
-          console.log(username,email,number,Password);
+    const [password, setPassWord] = useState();
+    const signup = async (e) => {
+      e.preventDefault();
+      // console.log(`${username}  ${email}  ${password}`);
+      const user = {
+        username: username,
+        email: email,
+        number:number,
+        password: password
+      }
+      try {
+        const response = await axios.post('http://localhost:6000/users', user);
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
     }
-
   return (
     <Box     component="form"
-    onSubmit={SignUp}
+    onSubmit={signup}
     sx={{
       '& .MuiTextField-root': { m: 1, width: '25ch' },
     }}
@@ -48,7 +60,7 @@ function Register() {
                       <TextField
                           id="outlined-password-input"
                           label="Password"
-                          value ={passWord}  onChange ={e =>setPassWord(e.target.value)} type="password" 
+                          value ={password}  onChange ={e =>setPassWord(e.target.value)} type="password" 
                           autoComplete="current-password"
                         /> <br/>
                       <Button  type='submit'>SignUp</Button>
