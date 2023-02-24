@@ -1,4 +1,4 @@
-import HEADER from './Header.js';
+import HEADER from './components/Navbar/Header.js';
 // import Image from './Image.js';
 // import MainContent from './MainContent.js';
 import FOOTER from './Footer.js';
