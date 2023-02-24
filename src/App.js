@@ -1,7 +1,7 @@
 import HEADER from './components/Navbar/Header.js';
 // import Image from './Image.js';
 // import MainContent from './MainContent.js';
-import FOOTER from './Footer.js';
+import FOOTER from './components/Footer.js';
 import About from './About.js';
 import Home from './Home.js';
 import LogIn from './LogIn.js';

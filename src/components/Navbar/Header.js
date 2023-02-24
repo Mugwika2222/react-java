@@ -1,12 +1,15 @@
 import React from 'react';
 import {
   Nav,
-  NavLink,
+
   Bars,
   NavMenu,
   NavBtn,
   NavBtnLink,
 } from './NavbarElements';
+import { Typography } from '@mui/material';
+import AnchorIcon from '@mui/icons-material/Anchor';
+
   
 const Navbar = () => {
   return (
@@ -15,29 +18,33 @@ const Navbar = () => {
         <Bars />
   
         <NavMenu>
-          <NavLink to='/about' activeStyle>
-            About
-          </NavLink>
-          <NavLink to='/events' activeStyle>
-            Events
-          </NavLink>
-          <NavLink to='/annual' activeStyle>
-            Annual Report
-          </NavLink>
-          <NavLink to='/team' activeStyle>
-            Teams
-          </NavLink>
-          <NavLink to='/blogs' activeStyle>
-            Blogs
-          </NavLink>
-          <NavLink to='/sign-up' activeStyle>
-            Sign Up
-          </NavLink>
+        <AnchorIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: '#fff' }} />
+        <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: '#fff',
+              textDecoration: 'none',
+            }}
+          >
+            PLUMBERS.<br/>
+            INC
+          </Typography>
+
+          
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+          <NavBtnLink to='/LogIn'>LOGIN</NavBtnLink>
+          <NavBtnLink to='/Register'>REGISTER</NavBtnLink>
         </NavBtn>
       </Nav>
     </>

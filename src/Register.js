@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Button,Box,TextField,Link, Card, CardContent } from '@mui/material';
 import { Link as RouterLink } from "react-router-dom";
 import './Register.css'; 
-import { Password } from '@mui/icons-material';
 import axios from 'axios';
 function Register() {
     const [username, setUsername] = useState('collins');
