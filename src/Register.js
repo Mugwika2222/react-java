@@ -11,14 +11,14 @@ function Register() {
     const signup = async (e) => {
       e.preventDefault();
       // console.log(`${username}  ${email}  ${password}`);
-      const user = {
+      const signup = {
         username: username,
         email: email,
         number:number,
         password: password
       }
       try {
-        const response = await axios.post('http://localhost:6000/users', user);
+        const response = await axios.post('http://localhost:8000/signup', signup);
         console.log(response);
       } catch (error) {
         console.log(error);
