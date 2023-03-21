@@ -3,21 +3,27 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link as RouterLink } from "react-router-dom";
 import './login.css'; 
+import axios from 'axios';
 
 
 
 function LogIn(props) {
     const  navigate = useNavigate();
-    const [username, setUsername] = useState('collins');
+    const [username, setUsername] = useState('');
     const [passWord, setPassWord] = useState();
     const LogIn = e =>{
         e.preventDefault();
-          console.log(username);
+        console.log(`${username}    ${passWord}`);
+        try {
+          axios.post('http://localhost:8000/api/v1/login', {username: username,  password: passWord});
+      } catch (error) {
+          console.log(error);
+      }
           navigate('/DashBoard');
           props.loginStatus.setIsLoggedIn(true);
           console.log(props.loginStatus.isLoggedIn)
           
-    }
+    };
 
   return (
     <Box     component="form"
