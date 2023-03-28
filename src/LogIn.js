@@ -16,13 +16,16 @@ function LogIn(props) {
         console.log(`${username}    ${passWord}`);
         try {
           axios.post('http://localhost:8000/api/v1/login', {username: username,  password: passWord});
-      } catch (error) {
-          console.log(error);
-      }
+          const {token} = response.data;
+          localStorage.setitem('authToken', token);
+          console.log(token);
           navigate('/DashBoard');
           props.loginStatus.setIsLoggedIn(true);
           console.log(props.loginStatus.isLoggedIn)
-          
+      } catch (error) {
+          console.log(error);
+      }
+      
     };
 
   return (
