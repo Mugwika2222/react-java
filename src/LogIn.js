@@ -11,11 +11,11 @@ function LogIn(props) {
     const  navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [passWord, setPassWord] = useState();
-    const LogIn = e =>{
+    const LogIn = async e =>{
         e.preventDefault();
         console.log(`${username}    ${passWord}`);
         try {
-          axios.post('http://localhost:8000/api/v1/login', {username: username,  password: passWord});
+         const response = await axios.post('http://localhost:8000/api/v1/login', {username: username,  password: passWord});
           const {token} = response.data;
           localStorage.setitem('authToken', token);
           console.log(token);

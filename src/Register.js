@@ -3,7 +3,9 @@ import { Button,Box,TextField,Link, Card, CardContent } from '@mui/material';
 import { Link as RouterLink } from "react-router-dom";
 import './Register.css'; 
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 function Register() {
+  const  navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState();
     const [password, setPassWord] = useState();
@@ -13,6 +15,7 @@ function Register() {
       console.log(`${username}  ${email}  ${password}`);
           try {
             axios.post('http://localhost:8000/api/v1/signup', {username: username, email: email, password: password});
+            navigate('/Login');
         } catch (error) {
             console.log(error);
         }
