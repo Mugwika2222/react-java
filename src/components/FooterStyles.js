@@ -50,7 +50,7 @@ export const FooterLink = styled.a`
   text-decoration: none;
    
   &:hover {
-      color: green;
+      color: white;
       transition: 200ms ease-in;
   }
 `;
